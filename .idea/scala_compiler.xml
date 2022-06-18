@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="HappyClassifierData,data.HappyClassifierData,happyclassifierdata_8513,happyclassifierservers,happyclassifierservers_1412" />
+  </component>
+</project>
