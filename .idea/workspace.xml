@@ -4,7 +4,37 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="add dependency to Store" />
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="ide files">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_19_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_linux_x86_64_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_macosx_x86_64_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_windows_x86_64_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_ndarray_0_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_core_api_0_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_core_api_linux_x86_64_0_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_core_api_macosx_x86_64_0_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_core_api_windows_x86_64_0_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_core_platform_0_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/data/emotions.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/data/emotions/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/data/emotions/train.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/data/emotions/val.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/data/sources.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/resources/Models/joy_and_anger/checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/resources/Models/joy_and_anger/joy_and_anger.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/resources/Models/joy_and_anger/joy_and_anger.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierData/HappyClassifierData/.idea/modules/HappyClassifierData.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierData/HappyClassifierData/.idea/modules/HappyClassifierData.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierData/HappyClassifierData/src/main/scala/main/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierData/HappyClassifierData/src/main/scala/happyclassiferdata/DataPreprocessor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/HappyClassiferStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/HappyClassiferStore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +68,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -59,20 +96,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;SELECTIVE&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/taeso/Documents/repos/HappyClassifier/HappyClassifierServers/HappyClassifierData/HappyClassifierData&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.26666668&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "SELECTIVE",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "last_opened_file_path": "C:/Users/taeso/Documents/repos/HappyClassifier/HappyClassifierServers/HappyClassifierStore/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.26666668",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\taeso\Documents\repos\HappyClassifier\HappyClassifierServers\HappyClassifierStore\src\main\resources" />
+      <recent name="C:\Users\taeso\Documents\repos\HappyClassifier\HappyClassifierServers\HappyClassifierStore\data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\taeso\Documents\repos\HappyClassifier\HappyClassifierServers\HappyClassifierStore" />
       <recent name="C:\Users\taeso\Documents\repos\HappyClassifier\HappyClassifierServers\HappyClassifierData\HappyClassifierData" />
@@ -124,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655521580018</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ide files">
+      <created>1655521915781</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655521915781</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +189,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add dependency to Store" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dependency to Store" />
+    <MESSAGE value="ide files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide files" />
   </component>
 </project>
