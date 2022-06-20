@@ -1,10 +1,11 @@
 package com.happyclassifier.happyclassiferstore;
 
-import com.happyclassifier.happyclassiferstore.inferences.HappyClassifierInferenceProvider;
+import com.happyclassifier.happyclassiferstore.datatypes.SentenceInferDataRequestBody;
 import com.happyclassifier.happyclassiferstore.models.Sentence;
 import com.happyclassifier.happyclassiferstore.repositories.SentenceRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedure;
+import com.happyclassifier.happyclassiferstore.store.procedures.abstractions.Procedure;
+import com.happyclassifier.happyclassiferstore.store.storeservice.StoreService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,15 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class SentenceController {
 
     private final SentenceRepository sentenceRepository;
-    private final HappyClassifierInferenceProvider happyClassifierInferenceProvider;
+    private final StoreService storeService;
 
     public SentenceController(
             SentenceRepository sentenceRepository,
-            HappyClassifierInferenceProvider happyClassifierInferenceProvider
+            StoreService storeService
                               ){
         this.sentenceRepository = sentenceRepository;
-        this.happyClassifierInferenceProvider = happyClassifierInferenceProvider;
-
+        this.storeService = storeService;
     }
 
     @PostMapping("insert")
@@ -33,7 +33,8 @@ public class SentenceController {
     }
 
     @PostMapping("infer")
-    public Sentence infer(@RequestBody String phrase){
+    public Sentence infer(@RequestBody SentenceInferDataRequestBody sentenceInferData){
+        SentenceInferModelProcedure procedure = new SentenceInferModelProcedure(sentenceInferData);
         // check Redis cache
 
         // check Store
@@ -41,8 +42,9 @@ public class SentenceController {
         // infer data
 
         // store and cache
+        this.storeService.call(procedure);
 
-        //
+        return new Sentence("Not fully implemented.");
     }
 
 }
