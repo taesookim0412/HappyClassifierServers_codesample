@@ -4,7 +4,7 @@ import com.happyclassifier.happyclassiferstore.inferences.abstractions.RealTimeI
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyClassifierInferenceProvider implements RealTimeInferenceProvider {
+public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider {
     public int test = 0;
     public HappyClassifierInferenceProvider(){
         for (int i = 0; i < 100; i++){
