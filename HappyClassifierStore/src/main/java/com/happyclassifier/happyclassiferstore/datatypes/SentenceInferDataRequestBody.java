@@ -7,4 +7,8 @@ public class SentenceInferDataRequestBody implements InferDataRequestBody {
     // TODO: Add payload data...
 
     public String sentence;
+
+    public SentenceInferDataRequestBody(String sentence) {
+        this.sentence = sentence;
+    }
 }

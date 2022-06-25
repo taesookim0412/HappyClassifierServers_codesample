@@ -54,5 +54,8 @@
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.21" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
+    <orderEntry type="library" name="Maven: ai.djl.pytorch:pytorch-engine:0.17.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: ai.djl.pytorch:pytorch-native-cpu:win-x86_64:1.11.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: ai.djl.pytorch:pytorch-jni:1.11.0-0.17.0" level="project" />
   </component>
 </module>
