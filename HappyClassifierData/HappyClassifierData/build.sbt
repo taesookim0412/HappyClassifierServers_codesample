@@ -1,4 +1,4 @@
-// Java JDK 11
+// Java JDK 8
 // Scala 2.12.16
 // Spark 3.1.3
 // Hadoop 3.2.2

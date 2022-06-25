@@ -11,7 +11,7 @@ public class SentenceInferModelProcedure extends CachedInferModelProcedure<Happy
     }
 
     protected SentenceInferDataRequestBody getInferDataBody() {
-        return super.getInferDataBody();
+        return super.getInferRequestBody();
     }
 
     public ProcedureResults applyProcedure(HappyClassifierInferenceProvider provider) {
