@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Turns out it isn't ZooModel it should be Model so it doesn't load with this commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ai_djl_pytorch_pytorch_engine_0_17_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ai_djl_pytorch_pytorch_jni_1_11_0_0_17_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ai_djl_pytorch_pytorch_native_cpu_win_x86_64_1_11_0.xml" afterDir="false" />
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="It accepts input and returns output (need to fix the input to be array)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/HappyClassiferStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/HappyClassiferStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/datatypes/SentenceInferDataRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/datatypes/SentenceInferDataRequestBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedure.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656136539177</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="It accepts input and returns output (need to fix the input to be array)">
+      <created>1656142895973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656142895973</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,15 +210,16 @@
     <MESSAGE value="oop" />
     <MESSAGE value="abstract" />
     <MESSAGE value="Turns out it isn't ZooModel it should be Model so it doesn't load with this commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Turns out it isn't ZooModel it should be Model so it doesn't load with this commit" />
+    <MESSAGE value="It accepts input and returns output (need to fix the input to be array)" />
+    <option name="LAST_COMMIT_MESSAGE" value="It accepts input and returns output (need to fix the input to be array)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="7" />
+          <line>101</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,6 +8,8 @@ import ai.djl.modality.Classifications;
 import ai.djl.ndarray.NDArray;
 import ai.djl.ndarray.NDList;
 import ai.djl.ndarray.NDManager;
+import ai.djl.ndarray.index.NDIndex;
+import ai.djl.ndarray.types.DataType;
 import ai.djl.ndarray.types.Shape;
 import ai.djl.repository.zoo.Criteria;
 import ai.djl.repository.zoo.ModelNotFoundException;
@@ -20,6 +22,7 @@ import com.happyclassifier.happyclassiferstore.inferences.abstractions.RealTimeI
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -83,9 +86,21 @@ public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider 
         // Not yet implemented the vocab pipeline and tokenizer..
         // TODO: Implement the string pre-processor
         //input texts, offsets
-        NDArray texts = ndManager.create(2);
-        NDArray offsets = ndManager.create(0);
+        // NDArray offsets = ndManager.zeros(new Shape(1), DataType.INT64);
 
+        NDArray texts = ndManager.ones(new Shape(12), DataType.INT64);
+        texts.set(new NDIndex(0), 2);
+        texts.set(new NDIndex(1), 1);
+        texts.set(new NDIndex(2), 3);
+
+        NDArray offsets = ndManager.create(new Shape(3), DataType.INT64);
+        offsets.set(new NDIndex(0), 0);
+        offsets.set(new NDIndex(2), 2);
+        offsets = offsets.flatten();
+
+
+        Shape textsShape = texts.getShape();
+        Shape offsetsShape = offsets.getShape();
 
         return new NDList(texts, offsets);
     }
