@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="It accepts input and returns output (need to fix the input to be array)">
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" afterDir="false" />
     </list>
@@ -189,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656142895973</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........">
+      <created>1656147047122</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656147047122</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,14 +218,15 @@
     <MESSAGE value="abstract" />
     <MESSAGE value="Turns out it isn't ZooModel it should be Model so it doesn't load with this commit" />
     <MESSAGE value="It accepts input and returns output (need to fix the input to be array)" />
-    <option name="LAST_COMMIT_MESSAGE" value="It accepts input and returns output (need to fix the input to be array)" />
+    <MESSAGE value="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........" />
+    <option name="LAST_COMMIT_MESSAGE" value="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java</url>
-          <line>101</line>
+          <line>99</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>

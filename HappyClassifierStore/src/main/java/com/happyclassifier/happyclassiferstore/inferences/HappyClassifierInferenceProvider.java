@@ -89,18 +89,13 @@ public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider 
         // NDArray offsets = ndManager.zeros(new Shape(1), DataType.INT64);
 
         NDArray texts = ndManager.ones(new Shape(12), DataType.INT64);
-        texts.set(new NDIndex(0), 2);
+        texts.set(new NDIndex(0), 0);
         texts.set(new NDIndex(1), 1);
         texts.set(new NDIndex(2), 3);
 
-        NDArray offsets = ndManager.create(new Shape(3), DataType.INT64);
+        NDArray offsets = ndManager.create(new Shape(2), DataType.INT32);
         offsets.set(new NDIndex(0), 0);
-        offsets.set(new NDIndex(2), 2);
-        offsets = offsets.flatten();
-
-
-        Shape textsShape = texts.getShape();
-        Shape offsetsShape = offsets.getShape();
+        offsets.set(new NDIndex(1), 2);
 
         return new NDList(texts, offsets);
     }
