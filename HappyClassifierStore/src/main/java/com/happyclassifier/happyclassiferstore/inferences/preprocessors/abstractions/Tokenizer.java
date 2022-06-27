@@ -27,11 +27,11 @@ public interface Tokenizer {
         patternsMap.put("\\!", " ! ");
         // Put spaces before and after ?
         patternsMap.put("\\?", " ? ");
-        // Put spaces before and after ;
+        // Replace ; with single space
         patternsMap.put("\\;", " ");
-        // Put spaces before and after :
+        // Replace : with single space
         patternsMap.put("\\:", " ");
-        // Put spaces before and after space
+        // Replace spaces with single spaces
         patternsMap.put("\\s+", " ");
 
         HashMap<Pattern, String> tokenizerMap = new HashMap();
