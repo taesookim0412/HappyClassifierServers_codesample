@@ -1,4 +1,4 @@
-package com.happyclassifier.happyclassiferstore.inferences.preprocessors.abstractions;
+package com.happyclassifier.happyclassiferstore.inferences.preprocessors.utilities;
 
 import java.util.ArrayList;
 import java.util.HashMap;

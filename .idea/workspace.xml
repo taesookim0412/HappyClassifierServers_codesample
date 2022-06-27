@@ -221,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656319745864</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)">
+      <created>1656323725120</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656323725120</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

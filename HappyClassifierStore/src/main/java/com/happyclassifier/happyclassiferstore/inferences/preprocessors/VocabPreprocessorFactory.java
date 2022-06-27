@@ -1,18 +1,16 @@
 package com.happyclassifier.happyclassiferstore.inferences.preprocessors;
 
 import com.happyclassifier.happyclassiferstore.inferences.datasetloaders.DatasetLoader;
-import com.happyclassifier.happyclassiferstore.inferences.preprocessors.abstractions.Tokenizer;
-import com.happyclassifier.happyclassiferstore.inferences.preprocessors.abstractions.Vocabularizer;
+import com.happyclassifier.happyclassiferstore.inferences.preprocessors.utilities.Tokenizer;
+import com.happyclassifier.happyclassiferstore.inferences.preprocessors.utilities.Vocabularizer;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.regex.Pattern;
 
 import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourceFileFromFileName;
-import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourcePathFromFileName;
 
 public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, DatasetLoader {
     HashMap<Pattern, String> tokenizerMap;
