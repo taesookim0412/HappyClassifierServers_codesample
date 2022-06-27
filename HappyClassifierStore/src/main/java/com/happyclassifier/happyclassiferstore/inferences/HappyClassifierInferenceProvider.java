@@ -1,41 +1,21 @@
 package com.happyclassifier.happyclassiferstore.inferences;
 
-import ai.djl.Device;
-import ai.djl.MalformedModelException;
 import ai.djl.Model;
 import ai.djl.inference.Predictor;
-import ai.djl.modality.Classifications;
 import ai.djl.ndarray.NDArray;
 import ai.djl.ndarray.NDList;
 import ai.djl.ndarray.NDManager;
-import ai.djl.ndarray.SparseNDArray;
-import ai.djl.ndarray.index.NDIndex;
-import ai.djl.ndarray.types.DataType;
-import ai.djl.ndarray.types.Shape;
-import ai.djl.repository.zoo.Criteria;
-import ai.djl.repository.zoo.ModelNotFoundException;
-import ai.djl.repository.zoo.ZooModel;
 import ai.djl.translate.TranslateException;
 import ai.djl.translate.Translator;
-import ai.djl.translate.TranslatorContext;
-import com.happyclassifier.happyclassiferstore.Application;
 import com.happyclassifier.happyclassiferstore.inferences.abstractions.RealTimeInferenceProvider;
 import com.happyclassifier.happyclassiferstore.inferences.preprocessors.VocabPreprocessorFactory;
-import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedureResults;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import javax.xml.crypto.Data;
 import java.io.IOException;
-import java.nio.IntBuffer;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 
 import static com.happyclassifier.happyclassiferstore.Utilities.InferenceMath.argMax;
-import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourcePathFromFileName;
 
 @Component
 public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider {

@@ -22,8 +22,8 @@ public interface Vocabularizer {
 
         int biggestFrequencyAfter = maxFrequency + 1;
 
-        for (String special : specials){
-            wordFrequencies.put(special, biggestFrequencyAfter);
+        for (int i = specials.size() - 1; i > -1; i--) {
+            wordFrequencies.put(specials.get(i), biggestFrequencyAfter);
             biggestFrequencyAfter += 1;
         }
 

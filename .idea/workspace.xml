@@ -4,24 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="............">
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Utilities/InferenceMath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/datatypes/enums/SentenceInferDataPredictionEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/datasetloaders/DatasetLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/abstractions/Tokenizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/abstractions/Vocabularizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/resources/Models/joy_and_anger_vocab.txt" afterDir="false" />
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Utilities/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Utilities/ResourceUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/abstractions/Vocabularizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/abstractions/Vocabularizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedure.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedureResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedureResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/storeservice/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/storeservice/StoreService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656148157871</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)">
+      <created>1656318702648</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656318702648</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,15 +236,16 @@
     <MESSAGE value="It accepts input and returns output (need to fix the input to be array)" />
     <MESSAGE value="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........" />
     <MESSAGE value="............" />
-    <option name="LAST_COMMIT_MESSAGE" value="............" />
+    <MESSAGE value="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

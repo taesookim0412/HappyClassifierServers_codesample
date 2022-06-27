@@ -29,8 +29,6 @@ public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, Datas
 
         // Initialize our vocabulary map.
         this.vocabMap = this.buildVocabFromTokenizedSentencesOptimized(tokenizedVocabulary, Arrays.asList("<unk>"));
-
-        System.out.println(this.vocabMap);
     }
 
     public String[] tokenizerPipeline(String sentence){

@@ -1,14 +1,11 @@
 package com.happyclassifier.happyclassiferstore.store.procedures;
 
-import ai.djl.ndarray.NDList;
 import com.happyclassifier.happyclassiferstore.datatypes.SentenceInferDataRequestBody;
 import com.happyclassifier.happyclassiferstore.datatypes.enums.ResultState;
 import com.happyclassifier.happyclassiferstore.datatypes.enums.SentenceInferDataPredictionEnum;
 import com.happyclassifier.happyclassiferstore.inferences.HappyClassifierInferenceProvider;
 import com.happyclassifier.happyclassiferstore.store.procedures.abstractions.CachedInferModelProcedure;
-import com.happyclassifier.happyclassiferstore.store.procedures.abstractions.ProcedureResults;
 
-import java.util.Arrays;
 
 public class SentenceInferModelProcedure extends CachedInferModelProcedure<HappyClassifierInferenceProvider, SentenceInferDataRequestBody> {
     public SentenceInferModelProcedure(SentenceInferDataRequestBody sentenceInferData) {
@@ -19,7 +16,7 @@ public class SentenceInferModelProcedure extends CachedInferModelProcedure<Happy
         return super.getInferRequestBody();
     }
 
-    public ProcedureResults applyProcedure(HappyClassifierInferenceProvider provider) {
+    public SentenceInferModelProcedureResults applyProcedure(HappyClassifierInferenceProvider provider) {
         SentenceInferModelProcedureResults procedureResults = new SentenceInferModelProcedureResults();
 
         int result = provider.predict(this.getInferDataBody().sentence);
@@ -38,9 +35,7 @@ public class SentenceInferModelProcedure extends CachedInferModelProcedure<Happy
                 procedureResults.state = ResultState.Failed;
                 break;
         }
-        System.out.println(procedureResults);
 
-        // ahh don't want to mess with the ProcedureResults return type
         return procedureResults;
 
     }
