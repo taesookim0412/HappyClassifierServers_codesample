@@ -4,6 +4,7 @@ import com.happyclassifier.happyclassiferstore.datatypes.SentenceInferDataReques
 import com.happyclassifier.happyclassiferstore.models.Sentence;
 import com.happyclassifier.happyclassiferstore.repositories.SentenceRepository;
 import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedure;
+import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedureResults;
 import com.happyclassifier.happyclassiferstore.store.procedures.abstractions.Procedure;
 import com.happyclassifier.happyclassiferstore.store.storeservice.StoreService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +34,7 @@ public class SentenceController {
     }
 
     @PostMapping("infer")
-    public Sentence infer(@RequestBody SentenceInferDataRequestBody sentenceInferData){
+    public SentenceInferModelProcedureResults infer(@RequestBody SentenceInferDataRequestBody sentenceInferData){
         SentenceInferModelProcedure procedure = new SentenceInferModelProcedure(sentenceInferData);
         // check Redis cache
 
@@ -42,9 +43,9 @@ public class SentenceController {
         // infer data
 
         // store and cache
-        this.storeService.call(procedure);
+        SentenceInferModelProcedureResults procedureResults = (SentenceInferModelProcedureResults) this.storeService.call(procedure);
 
-        return new Sentence("Not fully implemented.");
+        return procedureResults;
     }
 
 }

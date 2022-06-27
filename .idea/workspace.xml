@@ -4,9 +4,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........">
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="............">
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Utilities/InferenceMath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/datatypes/enums/SentenceInferDataPredictionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/datasetloaders/DatasetLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/abstractions/Tokenizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/abstractions/Vocabularizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/resources/Models/joy_and_anger_vocab.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Utilities/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/Utilities/ResourceUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedure.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedureResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/procedures/SentenceInferModelProcedureResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/storeservice/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/storeservice/StoreService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,20 +88,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "SELECTIVE",
-    "jdk.selected.JAVA_MODULE": "corretto-11",
-    "last_opened_file_path": "C:/Users/taeso/Documents/repos/HappyClassifier/HappyClassifierServers/HappyClassifierStore/src/main/resources/Models",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.26666668",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;SELECTIVE&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/taeso/Documents/repos/HappyClassifier/HappyClassifierServers/HappyClassifierStore/src/main/resources/Models&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.26666668&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.happyclassifier.happyclassiferstore.datatypes" />
@@ -196,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656147047122</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="............">
+      <created>1656148157871</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656148157871</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,15 +241,16 @@
     <MESSAGE value="Turns out it isn't ZooModel it should be Model so it doesn't load with this commit" />
     <MESSAGE value="It accepts input and returns output (need to fix the input to be array)" />
     <MESSAGE value="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........" />
-    <option name="LAST_COMMIT_MESSAGE" value="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........" />
+    <MESSAGE value="............" />
+    <option name="LAST_COMMIT_MESSAGE" value="............" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

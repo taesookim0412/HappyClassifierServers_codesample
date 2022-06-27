@@ -12,9 +12,22 @@ public class ResourceUtils {
     public static Path getResourcePathFromFileName(String fileName){
         return getResourcePath(loadResource(fileName));
     }
+    public static File getResourceFileFromFileName(String fileName){
+        return getResourceFile(loadResource(fileName));
+    }
 
     public static Resource loadResource(String fileName){
         return new ClassPathResource(fileName);
+    }
+
+    public static File getResourceFile(Resource resource){
+        try{
+            String uriPath = resource.getURI().getPath();
+            File file = new File(uriPath);
+            return file;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Path getResourcePath(Resource resource) {
@@ -27,6 +40,5 @@ public class ResourceUtils {
             // TODO: Handle URI error.
             throw new RuntimeException(e);
         }
-
     }
 }

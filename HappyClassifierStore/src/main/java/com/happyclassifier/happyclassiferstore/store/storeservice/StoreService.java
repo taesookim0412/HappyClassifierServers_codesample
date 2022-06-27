@@ -14,8 +14,8 @@ public class StoreService {
         this.modelProvider = modelProvider;
     }
 
-    public void call(Procedure procedure){
-        ProcedureResults result = procedure.applyProcedure(this.modelProvider);
+    public ProcedureResults call(Procedure procedure){
+        return procedure.applyProcedure(this.modelProvider);
 
     }
 }

@@ -8,6 +8,7 @@ import ai.djl.modality.Classifications;
 import ai.djl.ndarray.NDArray;
 import ai.djl.ndarray.NDList;
 import ai.djl.ndarray.NDManager;
+import ai.djl.ndarray.SparseNDArray;
 import ai.djl.ndarray.index.NDIndex;
 import ai.djl.ndarray.types.DataType;
 import ai.djl.ndarray.types.Shape;
@@ -19,62 +20,51 @@ import ai.djl.translate.Translator;
 import ai.djl.translate.TranslatorContext;
 import com.happyclassifier.happyclassiferstore.Application;
 import com.happyclassifier.happyclassiferstore.inferences.abstractions.RealTimeInferenceProvider;
+import com.happyclassifier.happyclassiferstore.inferences.preprocessors.VocabPreprocessorFactory;
+import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedureResults;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 import javax.xml.crypto.Data;
 import java.io.IOException;
+import java.nio.IntBuffer;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
+import static com.happyclassifier.happyclassiferstore.Utilities.InferenceMath.argMax;
 import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourcePathFromFileName;
 
 @Component
 public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider {
-    private Model model = this.loadModel();
+    private final Model model;
 
-    Translator<NDList, NDList> translator = new Translator<NDList, NDList>() {
-        @Override
-        public NDList processOutput(TranslatorContext translatorContext, NDList ndList) throws Exception {
-            return ndList;
-        }
+    Translator<NDList, NDList> translator;
 
-        @Override
-        public NDList processInput(TranslatorContext translatorContext, NDList ndArrays) throws Exception {
-            return ndArrays;
-        }
-    };
+    VocabPreprocessorFactory vocabPreprocessorFactory;
 
-    public HappyClassifierInferenceProvider(){
+    public HappyClassifierInferenceProvider() throws IOException {
         // load model here
-    }
-
-    private Model loadModel(){
-        Model model = Model.newInstance("pytorch_joy_and_anger_model_torchscript");
-        try{
-            model.load(getResourcePathFromFileName("Models/pytorch_joy_and_anger_model_torchscript.pt"));
-        } catch (MalformedModelException e) {
-            // TODO: Implement errors-handling.
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            // TODO: Implement errors-handling.{
-            throw new RuntimeException(e);
-        }
-        return model;
+        this.model = this.loadModel("pytorch_joy_and_anger_model_torchscript", "Models/pytorch_joy_and_anger_model_torchscript.pt");
+        this.translator = this.createTranslator();
+        this.vocabPreprocessorFactory = new VocabPreprocessorFactory("Models/joy_and_anger_vocab.txt");
     }
 
 
-
-    public float[] predict(String input){
+    public int predict(String input){
         //Preprocess the input
 
         try (Predictor<NDList, NDList> predictor = this.model.newPredictor(this.translator)){
-            try (NDManager manager = NDManager.newBaseManager()){
+            try (NDManager manager = NDManager.newBaseManager()) {
+
+
                 NDList prediction = predictor.predict(vocabProcess(input, manager));
                 NDArray data = prediction.get(0);
                 float[] result = data.toFloatArray();
-                return result;
+
+                return argMax(result);
             }
         } catch (TranslateException e) {
             // TODO: Handle TranslateError
@@ -83,20 +73,19 @@ public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider 
     }
 
     private NDList vocabProcess(String input, NDManager ndManager){
-        // Not yet implemented the vocab pipeline and tokenizer..
-        // TODO: Implement the string pre-processor
-        //input texts, offsets
-        // NDArray offsets = ndManager.zeros(new Shape(1), DataType.INT64);
+        Integer[] processedInput = this.vocabPreprocessorFactory.convertInputToProcessedInput(input);
 
-        NDArray texts = ndManager.ones(new Shape(12), DataType.INT64);
-        texts.set(new NDIndex(0), 0);
-        texts.set(new NDIndex(1), 1);
-        texts.set(new NDIndex(2), 3);
+        // TODO: Resolve this cast ( is it possible? )
+        NDArray texts = ndManager.create(Arrays.stream(processedInput).mapToInt(Integer::intValue).toArray());
 
-        NDArray offsets = ndManager.create(new Shape(2), DataType.INT32);
-        offsets.set(new NDIndex(0), 0);
-        offsets.set(new NDIndex(1), 2);
+        // Currently only supports one sentence input.
+        NDArray offsets = ndManager.create(0);
 
-        return new NDList(texts, offsets);
+        ArrayList<NDArray> ndArrays = new ArrayList<NDArray>();
+        ndArrays.add(texts);
+        ndArrays.add(offsets);
+
+        return new NDList(ndArrays);
+        //return new NDList(texts, offsets);
     }
 }
