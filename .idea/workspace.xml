@@ -252,9 +252,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/abstractions/RealTimeInferenceProvider.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

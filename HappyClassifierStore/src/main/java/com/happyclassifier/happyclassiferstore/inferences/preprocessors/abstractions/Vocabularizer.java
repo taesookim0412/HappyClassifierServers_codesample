@@ -14,8 +14,13 @@ public interface Vocabularizer {
         for (String[] sentence : normalizedSentences){
             for (String word : sentence){
                 if (!specialsSet.contains(word)){
-                    wordFrequencies.put(word, wordFrequencies.getOrDefault(word, 0) + 1);
-                    maxFrequency = Math.max(maxFrequency, wordFrequencies.get(word));
+
+                    int frequency = wordFrequencies.getOrDefault(word, 0) + 1;
+                    wordFrequencies.put(word, frequency);
+
+                    if (frequency > maxFrequency){
+                        maxFrequency = frequency;
+                    }
                 }
             }
         }
