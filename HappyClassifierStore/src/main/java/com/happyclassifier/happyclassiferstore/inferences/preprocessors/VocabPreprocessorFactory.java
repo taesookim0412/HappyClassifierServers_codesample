@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourceFileFromFileName;
 
 public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, DatasetLoader {
-    ArrayList<ArrayList<Object>> tokenizerArray;
+    Object[][] tokenizerArray;
 
     public final HashMap<String, Integer> vocabMap;
 

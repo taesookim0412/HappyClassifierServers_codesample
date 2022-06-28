@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)">
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/utilities/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/utilities/Tokenizer.java" afterDir="false" />
     </list>
@@ -239,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656324911908</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)">
+      <created>1656378366118</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656378366118</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,16 +270,13 @@
     <MESSAGE value="....offsets (second parameter) changes shape from (3) to (1,3) in torchscript (bug). and model has to change to single input........" />
     <MESSAGE value="............" />
     <MESSAGE value="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)" />
+    <MESSAGE value="Convert HashMap to preserve order (just in case the regex gets changed) (assuming it stays)" />
+    <MESSAGE value="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java</url>
           <line>67</line>
@@ -281,8 +284,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/utilities/Tokenizer.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="37" />
+          <line>58</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

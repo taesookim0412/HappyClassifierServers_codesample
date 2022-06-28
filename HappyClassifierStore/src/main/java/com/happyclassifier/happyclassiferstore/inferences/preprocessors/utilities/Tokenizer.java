@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public interface Tokenizer {
 
-    default ArrayList<ArrayList<Object>> initializeTokenizerMap() {
+    default Object[][] initializeTokenizerMap() {
         String[][] patternsList = new String[][]{
                 // Put spaces before and after '
                 new String[]{"'", " ' "},
@@ -36,12 +36,10 @@ public interface Tokenizer {
                 new String[]{"\\s+", " "}
         };
 
-        ArrayList<ArrayList<Object>> tokenizerArray = new ArrayList<ArrayList<Object>>(patternsList.length);
+        Object[][] tokenizerArray = new Object[patternsList.length][2];
         for (int i = 0; i < patternsList.length; i++){
-            ArrayList<Object> entry = new ArrayList<Object>(2);
-            entry.add(Pattern.compile(patternsList[i][0]));
-            entry.add(patternsList[i][1]);
-            tokenizerArray.add(entry);
+            tokenizerArray[i][0] = Pattern.compile(patternsList[i][0]);
+            tokenizerArray[i][1] = patternsList[i][1];
         }
         return tokenizerArray;
     }
@@ -49,17 +47,17 @@ public interface Tokenizer {
     /**
      * Uses regex to reconstruct a sentence.
      */
-    default String[] basic_english_normalize(String sentence, ArrayList<ArrayList<Object>> tokenizerArray) {
+    default String[] basic_english_normalize(String sentence, Object[][] tokenizerArray) {
         String line = sentence.toLowerCase();
-        for (ArrayList<Object> patternToReplacement : tokenizerArray) {
-            Pattern pattern = (Pattern) patternToReplacement.get(0);
-            String replacement = (String) patternToReplacement.get(1);
+        for (Object[] patternToReplacement : tokenizerArray) {
+            Pattern pattern = (Pattern) patternToReplacement[0];
+            String replacement = (String) patternToReplacement[1];
             line = pattern.matcher(line).replaceAll(replacement);
         }
         return line.split(" ");
     }
 
-    default String[][] tokenizeDatasetVocabulary(ArrayList<String> datasetLines, ArrayList<ArrayList<Object>> tokenizerArray) {
+    default String[][] tokenizeDatasetVocabulary(ArrayList<String> datasetLines, Object[][] tokenizerArray) {
         String[][] result = new String[datasetLines.size()][];
         for (int i = 0; i < datasetLines.size(); i++) {
             result[i] = basic_english_normalize(datasetLines.get(i), tokenizerArray);
