@@ -1,14 +1,11 @@
 package com.happyclassifier.happyclassiferstore.inferences.preprocessors.utilities;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Pattern;
 
 public interface Tokenizer {
 
-    default Object[][] initializeTokenizerMap() {
+    default Object[][] initializeTokenizerArray() {
         String[][] patternsList = new String[][]{
                 // Put spaces before and after '
                 new String[]{"'", " ' "},
@@ -18,7 +15,7 @@ public interface Tokenizer {
                 new String[]{"\\.", " . "},
                 // Replace html line breaks with empty space.
                 new String[]{"<br />", " "},
-                // Put spaces before and after , --> Question, why doesn't this have a backslash?
+                // Put spaces before and after ,
                 new String[]{",", " , "},
                 // Put spaces before and after (
                 new String[]{"\\(", " \\( " },

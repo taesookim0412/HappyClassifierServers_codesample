@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)">
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Convert ArrayList to Object[][]">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/VocabPreprocessorFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/utilities/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/utilities/Tokenizer.java" afterDir="false" />
     </list>
@@ -245,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656378366118</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Convert ArrayList to Object[][]">
+      <created>1656378851711</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656378851711</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,20 +281,21 @@
     <MESSAGE value="Convert python to Java vocab + tokenizer pre-processor and implement infer api calls (Complete the back-end with the model)" />
     <MESSAGE value="Convert HashMap to preserve order (just in case the regex gets changed) (assuming it stays)" />
     <MESSAGE value="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)" />
+    <MESSAGE value="Convert ArrayList to Object[][]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert ArrayList to Object[][]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/HappyClassifierInferenceProvider.java</url>
-          <line>67</line>
+          <line>65</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/inferences/preprocessors/utilities/Tokenizer.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="39" />
+          <line>53</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -294,5 +304,11 @@
         <PinnedItemInfo parentTag="ai.djl.pytorch.engine.PtNDArray" memberName="manager" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="tokenizerArray[11]" />
+        <watch expression="tokenizerArray[11]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

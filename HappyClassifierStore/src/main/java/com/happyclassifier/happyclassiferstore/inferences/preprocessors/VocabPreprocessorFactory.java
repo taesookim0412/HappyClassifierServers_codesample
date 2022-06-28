@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.regex.Pattern;
 
 import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourceFileFromFileName;
 
@@ -19,7 +18,7 @@ public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, Datas
 
     public VocabPreprocessorFactory(String vocabFileName) throws IOException {
         // Compile regex replacements and create our map.
-        this.tokenizerArray = this.initializeTokenizerMap();
+        this.tokenizerArray = this.initializeTokenizerArray();
         // Read our dataset as an ArrayList of strings.
         ArrayList<String> datasetLines = this.readVocabFromFile(getResourceFileFromFileName(vocabFileName));
         // Convert our vocabulary lines to tokenized strings.
@@ -33,8 +32,8 @@ public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, Datas
         return this.basic_english_normalize(sentence, this.tokenizerArray);
     }
 
-    public Integer[] vocabPipeline(String[] tokenizedSentence){
-        Integer[] result = new Integer[tokenizedSentence.length];
+    public int[] vocabPipeline(String[] tokenizedSentence){
+        int[] result = new int[tokenizedSentence.length];
         for (int i = 0; i < tokenizedSentence.length; i++){
             result[i] = this.vocabMap.getOrDefault(tokenizedSentence[i], 0);
         }
@@ -42,7 +41,7 @@ public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, Datas
         return result;
     }
 
-    public Integer[] convertInputToProcessedInput(String input){
+    public int[] convertInputToProcessedInput(String input){
         // TODO: Migrate this vocab pipeline from regex to something faster.
         return this.vocabPipeline(this.tokenizerPipeline(input));
     }

@@ -53,10 +53,8 @@ public class HappyClassifierInferenceProvider extends RealTimeInferenceProvider 
     }
 
     private NDList vocabProcess(String input, NDManager ndManager){
-        Integer[] processedInput = this.vocabPreprocessorFactory.convertInputToProcessedInput(input);
-
-        // TODO: Resolve this cast ( is it possible? )
-        NDArray texts = ndManager.create(Arrays.stream(processedInput).mapToInt(Integer::intValue).toArray());
+        int[] processedInput = this.vocabPreprocessorFactory.convertInputToProcessedInput(input);
+        NDArray texts = ndManager.create(processedInput);
 
         // Currently only supports one sentence input.
         NDArray offsets = ndManager.create(0);
