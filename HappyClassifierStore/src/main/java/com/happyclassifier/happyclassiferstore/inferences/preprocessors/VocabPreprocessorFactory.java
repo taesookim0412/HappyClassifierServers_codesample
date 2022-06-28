@@ -13,24 +13,24 @@ import java.util.regex.Pattern;
 import static com.happyclassifier.happyclassiferstore.Utilities.ResourceUtils.getResourceFileFromFileName;
 
 public class VocabPreprocessorFactory implements Vocabularizer, Tokenizer, DatasetLoader {
-    HashMap<Pattern, String> tokenizerMap;
+    ArrayList<ArrayList<Object>> tokenizerArray;
 
     public final HashMap<String, Integer> vocabMap;
 
     public VocabPreprocessorFactory(String vocabFileName) throws IOException {
         // Compile regex replacements and create our map.
-        this.tokenizerMap = this.initializeTokenizerMap();
+        this.tokenizerArray = this.initializeTokenizerMap();
         // Read our dataset as an ArrayList of strings.
         ArrayList<String> datasetLines = this.readVocabFromFile(getResourceFileFromFileName(vocabFileName));
         // Convert our vocabulary lines to tokenized strings.
-        String[][] tokenizedVocabulary = this.tokenizeDatasetVocabulary(datasetLines, this.tokenizerMap);
+        String[][] tokenizedVocabulary = this.tokenizeDatasetVocabulary(datasetLines, this.tokenizerArray);
 
         // Initialize our vocabulary map.
         this.vocabMap = this.buildVocabFromTokenizedSentencesOptimized(tokenizedVocabulary, Arrays.asList("<unk>"));
     }
 
     public String[] tokenizerPipeline(String sentence){
-        return this.basic_english_normalize(sentence, this.tokenizerMap);
+        return this.basic_english_normalize(sentence, this.tokenizerArray);
     }
 
     public Integer[] vocabPipeline(String[] tokenizedSentence){

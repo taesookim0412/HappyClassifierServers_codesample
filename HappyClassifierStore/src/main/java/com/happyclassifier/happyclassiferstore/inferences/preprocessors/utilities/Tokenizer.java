@@ -1,60 +1,68 @@
 package com.happyclassifier.happyclassiferstore.inferences.preprocessors.utilities;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 public interface Tokenizer {
 
-    default HashMap<Pattern, String> initializeTokenizerMap(){
-        HashMap<String, String> patternsMap = new HashMap();
-        // Put spaces before and after '
-        patternsMap.put("\\'", " ' ");
-        // Put spaces before and after "
-        patternsMap.put("\\\"", "");
-        // Put spaces before and after .
-        patternsMap.put("\\.", " . ");
-        // Replace html line breaks with empty space.
-        patternsMap.put("<br />", " ");
-        // Put spaces before and after , --> Question, why doesn't this have a backslash?
-        patternsMap.put(",", " , ");
-        // Put spaces before and after (
-        patternsMap.put("\\(", " ( ");
-        // Put spaces before and after )
-        patternsMap.put("\\)", " ) ");
-        // Put spaces before and after !
-        patternsMap.put("\\!", " ! ");
-        // Put spaces before and after ?
-        patternsMap.put("\\?", " ? ");
-        // Replace ; with single space
-        patternsMap.put("\\;", " ");
-        // Replace : with single space
-        patternsMap.put("\\:", " ");
-        // Replace spaces with single spaces
-        patternsMap.put("\\s+", " ");
+    default ArrayList<ArrayList<Object>> initializeTokenizerMap() {
+        String[][] patternsList = new String[][]{
+                // Put spaces before and after '
+                new String[]{"'", " ' "},
+                // Remove "
+                new String[]{"\"", ""},
+                // Put spaces before and after .
+                new String[]{"\\.", " . "},
+                // Replace html line breaks with empty space.
+                new String[]{"<br />", " "},
+                // Put spaces before and after , --> Question, why doesn't this have a backslash?
+                new String[]{",", " , "},
+                // Put spaces before and after (
+                new String[]{"\\(", " \\( " },
+                // Put spaces before and after )
+                new String[]{"\\)", " \\) "},
+                // Put spaces before and after !
+                new String[]{"!", " ! "},
+                // Put spaces before and after ?
+                new String[]{"\\?", " ? "},
+                // Replace ; with single space
+                new String[]{";", " "},
+                // Replace : with single space
+                new String[]{":", " "},
+                // Replace spaces with single spaces
+                new String[]{"\\s+", " "}
+        };
 
-        HashMap<Pattern, String> tokenizerMap = new HashMap();
-        for (Map.Entry<String, String> patternSet : patternsMap.entrySet()){
-            tokenizerMap.put(Pattern.compile(patternSet.getKey()), patternSet.getValue());
+        ArrayList<ArrayList<Object>> tokenizerArray = new ArrayList<ArrayList<Object>>(patternsList.length);
+        for (int i = 0; i < patternsList.length; i++){
+            ArrayList<Object> entry = new ArrayList<Object>(2);
+            entry.add(Pattern.compile(patternsList[i][0]));
+            entry.add(patternsList[i][1]);
+            tokenizerArray.add(entry);
         }
-        return tokenizerMap;
+        return tokenizerArray;
     }
 
-    /** Uses regex to reconstruct a sentence.
+    /**
+     * Uses regex to reconstruct a sentence.
      */
-    default String[] basic_english_normalize(String sentence, HashMap<Pattern, String> tokenizerMap){
+    default String[] basic_english_normalize(String sentence, ArrayList<ArrayList<Object>> tokenizerArray) {
         String line = sentence.toLowerCase();
-        for (Map.Entry<Pattern, String> replacementsSet : tokenizerMap.entrySet()){
-            line = replacementsSet.getKey().matcher(line).replaceAll(replacementsSet.getValue());
+        for (ArrayList<Object> patternToReplacement : tokenizerArray) {
+            Pattern pattern = (Pattern) patternToReplacement.get(0);
+            String replacement = (String) patternToReplacement.get(1);
+            line = pattern.matcher(line).replaceAll(replacement);
         }
         return line.split(" ");
     }
 
-    default String[][] tokenizeDatasetVocabulary(ArrayList<String> datasetLines, HashMap<Pattern, String> tokenizerMap){
+    default String[][] tokenizeDatasetVocabulary(ArrayList<String> datasetLines, ArrayList<ArrayList<Object>> tokenizerArray) {
         String[][] result = new String[datasetLines.size()][];
-        for (int i = 0; i < datasetLines.size(); i++){
-            result[i] = basic_english_normalize(datasetLines.get(i), tokenizerMap);
+        for (int i = 0; i < datasetLines.size(); i++) {
+            result[i] = basic_english_normalize(datasetLines.get(i), tokenizerArray);
         }
         return result;
     }
