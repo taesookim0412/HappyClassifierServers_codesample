@@ -6,14 +6,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
+
 public class Sentence {
     @Id
     private String id;
 
-    @Field("phrase")
     private String phrase;
 
-    @Field("connotation")
     private double connotation;
 
     public String getPhrase() {

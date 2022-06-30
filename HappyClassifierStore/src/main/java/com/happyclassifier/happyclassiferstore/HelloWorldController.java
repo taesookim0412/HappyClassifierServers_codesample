@@ -7,6 +7,7 @@ import com.happyclassifier.happyclassiferstore.store.storeservice.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 @RestController
 public class HelloWorldController {
@@ -15,14 +16,9 @@ public class HelloWorldController {
     StoreService storeService;
 
     @GetMapping("helloworld")
-    private SentenceInferModelProcedureResults shadyTestFunction(String sentence){
+    private Mono<SentenceInferModelProcedureResults> shadyTestFunction(String sentence){
         SentenceInferModelProcedure shadyProcedure = new SentenceInferModelProcedure(new SentenceInferDataRequestBody(sentence));
         SentenceInferModelProcedureResults results = (SentenceInferModelProcedureResults) this.storeService.call(shadyProcedure);
-        return results;
-    }
-
-    @GetMapping("/story")
-    public String index(){
-        return "Hello, world!";
+        return Mono.just(results);
     }
 }

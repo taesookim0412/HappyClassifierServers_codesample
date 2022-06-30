@@ -11,4 +11,16 @@ public class SentenceInferDataRequestBody implements InferDataRequestBody {
     public SentenceInferDataRequestBody(String sentence) {
         this.sentence = sentence;
     }
+
+    public SentenceInferDataRequestBody(){
+
+    }
+
+    public String getSentence() {
+        return sentence;
+    }
+
+    public void setSentence(String sentence) {
+        this.sentence = sentence;
+    }
 }
