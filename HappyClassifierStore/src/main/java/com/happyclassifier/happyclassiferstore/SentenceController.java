@@ -1,19 +1,16 @@
 package com.happyclassifier.happyclassiferstore;
 
 import com.happyclassifier.happyclassiferstore.datatypes.SentenceInferDataRequestBody;
-import com.happyclassifier.happyclassiferstore.datatypes.abstractions.InferDataRequestBody;
 import com.happyclassifier.happyclassiferstore.models.Sentence;
-import com.happyclassifier.happyclassiferstore.repositories.SentenceRepository;
+import com.happyclassifier.happyclassiferstore.models.repositories.SentenceRepository;
 import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedure;
 import com.happyclassifier.happyclassiferstore.store.procedures.SentenceInferModelProcedureResults;
-import com.happyclassifier.happyclassiferstore.store.procedures.abstractions.Procedure;
 import com.happyclassifier.happyclassiferstore.store.storeservice.StoreService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestBody;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController

@@ -4,53 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Resolve cast, change tokenizer &quot;map&quot; name to array, change some comments">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_77_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_reactivestreams_4_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_reactive_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/dao/SentenceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/interceptors/FluxInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/services/SentenceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/config/MongoDbConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/config/WebFluxConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_63.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_63.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_63.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_3_20.xml" afterDir="false" />
+    <list default="true" id="a07cb1c2-1fa1-4011-8fc7-4d1897b34a23" name="Changes" comment="Convert poc to webflux">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/HappyClassiferStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/HappyClassiferStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/HelloWorldController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/SentenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/datatypes/SentenceInferDataRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/datatypes/SentenceInferDataRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/models/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/models/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/repositories/SentenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/repositories/SentenceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/store/config/MongoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/repositories/SentenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/models/repositories/SentenceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/services/SentenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HappyClassifierStore/src/main/java/com/happyclassifier/happyclassiferstore/services/SentenceService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656402725825</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Convert poc to webflux">
+      <created>1656553666451</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656553666451</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,7 +297,8 @@
     <MESSAGE value="Convert HashMap to ArrayList to preserve order (just in case the regex gets changed) (assuming it stays)" />
     <MESSAGE value="Convert ArrayList to Object[][]" />
     <MESSAGE value="Resolve cast, change tokenizer &quot;map&quot; name to array, change some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve cast, change tokenizer &quot;map&quot; name to array, change some comments" />
+    <MESSAGE value="Convert poc to webflux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert poc to webflux" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

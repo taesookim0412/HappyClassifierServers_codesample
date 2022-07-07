@@ -1,6 +1,6 @@
 // Java JDK 8
 // Scala 2.12.16
-// Spark 3.1.3
+// Spark 3.1.2
 // Hadoop 3.2.2
 
 ThisBuild / version := "0.1.0-SNAPSHOT"
@@ -12,7 +12,7 @@ lazy val root = (project in file("."))
     name := "HappyClassifierData"
   )
 
-val sparkVersion = "3.1.3"
+val sparkVersion = "3.1.2"
 
 libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-core_2.12" % sparkVersion,

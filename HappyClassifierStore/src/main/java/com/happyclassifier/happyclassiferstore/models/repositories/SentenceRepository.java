@@ -1,4 +1,4 @@
-package com.happyclassifier.happyclassiferstore.repositories;
+package com.happyclassifier.happyclassiferstore.models.repositories;
 
 import com.happyclassifier.happyclassiferstore.dao.SentenceDao;
 import com.happyclassifier.happyclassiferstore.models.Sentence;
